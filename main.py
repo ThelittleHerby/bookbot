@@ -28,13 +28,13 @@ def main():
         word_count = count_word(file_contents)  # Wörter zählen
         char_count = count_characters(file_contents)  # Zeichen zählen
         
-        print(f"--- Begin report of {file_path} ---")
-        print(f"{word_count} words found in the document\n")
+        print(f"--- Beginne den Report von {file_path} ---")
+        print(f"{word_count} Wörter im Dokument gefunden\n")
         
         for char, count in sorted(char_count.items()):  # Alphabetisch sortierte Ausgabe
-            print(f"The '{char}' character was found {count} times")
+            print(f"Der '{char}' Buchstabe wurde {count} mal gefunden")
         
-        print("--- End report ---")
+        print("--- Report Ende ---")
     except FileNotFoundError:
         print("Die Datei wurde nicht gefunden.")  # Fehlermeldung bei fehlender Datei
     except Exception as e:
